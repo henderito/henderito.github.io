@@ -1,0 +1,44 @@
+{
+  "name": "uniqueer-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "format": "npx prettier --write ."
+  },
+  "dependencies": {
+    "i18next": "^23.11.5",
+    "next": "14.3.0-canary.46",
+    "next-intl": "^3.15.3",
+    "react": "19.0.0-beta-4508873393-20240430",
+    "react-dom": "19.0.0-beta-4508873393-20240430",
+    "react-i18next": "^14.1.2",
+    "react-parallax-tilt": "^1.7.236",
+    "react-player": "^2.16.0",
+    "react-responsive-carousel": "^3.2.23",
+    "styled-components": "^6.1.11",
+    "swiper": "^11.1.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/styled-components": "^5.1.34",
+    "babel-plugin-styled-components": "^2.1.4",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "prettier": "3.3.2",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
