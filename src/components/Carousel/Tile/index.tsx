@@ -11,7 +11,7 @@ export const Tile: FC<ITileProps> = ({ description, image, tags, title, columns 
                 <Banner.Description description={description} tags={tags} />
             </Banner.Column>
             <Banner.Column columnDirection="flex-end">
-               {buttonLabel && onClick && <Button size="small" variant="fill" onClick={onClick}>
+               {buttonLabel && onClick && <Button size="small" variant="filled" onClick={onClick}>
                     {buttonLabel}
                 </Button>}
             </Banner.Column>

@@ -100,7 +100,7 @@ export const TextArea: FC<ITextareaProps> = ({
             onChange={e => handleOnChange(e.target.value)}
             onFocus={handleOnFocus}
             onBlur={handleOnBlur}
-            ref={ref => setRef(ref)}
+            // ref={ref => setRef(ref)}
             {...rest}
           />
         </StyledTextarea>

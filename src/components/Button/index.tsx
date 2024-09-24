@@ -1,12 +1,16 @@
 'use client'
 
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 import styled from "styled-components";
 import { IButtonProps } from "./types";
 import { BUTTON_SIZES, BUTTON_STYLES, COLORS } from "@/global/theme";
 import { ChevronRight } from "../Icons/ChevronRight";
 
-const ButtonBase = styled.button`
+const ButtonBase: FC<{ 
+    fontWeight: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900, 
+    children: ReactNode,
+    style: any,
+    onClick: any }> = styled.button`
   font-size: var(--fontSize);
   font-family: "Roboto", sans-serif;
   padding: var(--padding);

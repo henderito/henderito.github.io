@@ -8,7 +8,7 @@ export interface IInputProps {
     onChange: (value: string) => void;
     onFocus?: () => void;
     onBlur?: () => void;
-    setRef?: ((ref: HTMLInputElement | null) => void) | undefined;
+    setRef: ((ref: HTMLInputElement | null | undefined) => void) | undefined;
 }
 
 export interface IInputContainerProps {

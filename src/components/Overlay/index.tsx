@@ -1,11 +1,11 @@
 'use client'
 
-import React, { FC } from "react"
+import React, { FC, ReactNode } from "react"
 import { IOverlayProps } from "./types"
 import styled from "styled-components"
 import { COLORS } from "@/global/theme"
 
-const StyledContainer= styled.div`
+const StyledContainer: FC<{ children: ReactNode, border: number}> = styled.div`
     width: 100%;
     height: 100%;
     background: ${COLORS.overlay};

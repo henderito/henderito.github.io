@@ -78,7 +78,7 @@ const MenuLabel = styled.div`
     }
 `;
 
-const SelectedFlag: FC<{ image: string }> = styled.div`
+const SelectedFlag: FC<{ image?: string }> = styled.div`
     background-image: url(${props => props.image});
     background-size: cover;
     background-position: center;

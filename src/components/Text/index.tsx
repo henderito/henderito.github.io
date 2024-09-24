@@ -1,11 +1,11 @@
 'use client'
 
-import React, { FC } from "react"
+import React, { FC, ReactNode } from "react"
 import styled from "styled-components"
 import { ITextsProps } from "./types"
 import { TEXT_SIZES, TEXT_STYLES } from "@/global/theme";
 
-const StyledText = styled.div`
+const StyledText: FC<{ children: ReactNode, style: any, alignment: 'center' | 'start' | 'end'}> = styled.div`
     text-align: ${props => props.alignment};
     color: var(--color);
     background-color: var(--backgroundColor);

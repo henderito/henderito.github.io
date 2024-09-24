@@ -1,0 +1,35 @@
+{
+  "version": 3,
+  "middleware": {
+    "/": {
+      "files": [
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/src/middleware.js"
+      ],
+      "name": "src/middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "^\\/nextjs-github-pages(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(\\/?index|\\/?index\\.json))?[\\/#\\?]?$",
+          "originalSource": "/"
+        },
+        {
+          "regexp": "^\\/nextjs-github-pages(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(es|en|it|fr|pt))(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(.json)?[\\/#\\?]?$",
+          "originalSource": "/(es|en|it|fr|pt)/:path*"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "7cc5d46828c4352d97a5cd17748619de",
+        "previewModeSigningKey": "c3bc23ee99ceba030129c9dbde9f840ed10c5cd18df08460f24e2d2708dba086",
+        "previewModeEncryptionKey": "54f7d442a1a55846507acd08aa8a6c6fc16b9acac4234ada997ebc878920802a"
+      }
+    }
+  },
+  "functions": {},
+  "sortedMiddleware": [
+    "/"
+  ]
+}

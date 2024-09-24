@@ -8,5 +8,5 @@ export interface ITextsProps {
     // backgroundColor?: Theme.Color;
     size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
     // bold?: boolean;
-    align?: 'start' | 'center' | 'end;'
+    align?: 'start' | 'center' | 'end'
 }
