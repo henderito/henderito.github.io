@@ -7,7 +7,10 @@ import fs from 'fs'
 import { NewsContainer } from "@/components/News";
 import { INews } from "@/global/newsData";
 
-
+// Return a list of `params` to populate the [slug] dynamic segment
+export async function generateStaticParams() {
+  return [{ id: 'anio-inclusion' }]
+}
 
 export default function NewsPage({ params: { id } }: { params: { id: keyof INews }}) {
   const data = getNewsInfoById(id);
