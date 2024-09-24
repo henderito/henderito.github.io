@@ -25,7 +25,7 @@ export default function News({ params: { locale }}: Readonly<{ params: { locale:
 
   return (
     <main>
-      <Header lang={locale} />
+      <Header />
       <StyledPageContainer>
         <TitleContainer>
           <Text label={t('Title')} size="3xl" variant="alternatePink" />
