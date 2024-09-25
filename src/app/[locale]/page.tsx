@@ -6,8 +6,23 @@ import { MemberSection } from '@/components/Sections/Members';
 import { ContactPage } from '@/components/Sections/Contact';
 import { Footer } from '@/components/Footer';
 import { TeamSection } from '@/components/Sections/Team';
+import { unstable_setRequestLocale } from 'next-intl/server';
+// import { getTranslations } from 'next-intl/server';
 
-export default function Home() {
+// export async function generateMetadata({params: {locale}}: { params: { locale: string}}) {
+//   const t = await getTranslations({locale, namespace: 'Metadata'});
+ 
+//   return {
+//     title: t('title')
+//   };
+// }
+
+export default function Home({
+  params: { locale }
+}: Readonly<{
+  params: { locale: string };
+}>) {
+  unstable_setRequestLocale(locale);
   return (
     <main>
       <Header />

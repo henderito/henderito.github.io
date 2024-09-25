@@ -11,20 +11,20 @@
       "page": "/",
       "matchers": [
         {
-          "regexp": "^\\/nextjs-github-pages(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(\\/?index|\\/?index\\.json))?[\\/#\\?]?$",
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(\\/?index|\\/?index\\.json))?[\\/#\\?]?$",
           "originalSource": "/"
         },
         {
-          "regexp": "^\\/nextjs-github-pages(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(es|en|it|fr|pt))(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(.json)?[\\/#\\?]?$",
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(es|en|it|fr|pt))(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(.json)?[\\/#\\?]?$",
           "originalSource": "/(es|en|it|fr|pt)/:path*"
         }
       ],
       "wasm": [],
       "assets": [],
       "environments": {
-        "previewModeId": "1450a1d854cf5e473e503ee45a53d7c1",
-        "previewModeSigningKey": "1ed57198b0d855fb57043455290432077386c143e303bd0e862a2028ec74774b",
-        "previewModeEncryptionKey": "a5b18cf054443101bad23dd4cacf007315d8b6d262502bb909242e6bda23c785"
+        "previewModeId": "a186562eeb0dd9460f70a01b109feeb9",
+        "previewModeSigningKey": "71563555c970f90db2dcb7c90661760433cf645f91e785b77e1cd950900a0448",
+        "previewModeEncryptionKey": "16695b3445e4894e6c5e4fc346d34ba49d43bafd1b9331222de1d0053d473c6d"
       }
     }
   },

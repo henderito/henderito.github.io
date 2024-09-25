@@ -5,6 +5,7 @@ import {getMessages} from 'next-intl/server';
 import '../../i18n'
 import StyledComponentsRegistry from "@/components/ComponentRegistrty/register";
 import localFont from 'next/font/local'
+import {unstable_setRequestLocale} from 'next-intl/server';
 
 export const metadata: Metadata = {
   title: "Uniqueer",
@@ -27,6 +28,7 @@ export default async function RootLayout({
   params: { locale: string };
 }>) {
   const messages = await getMessages();
+  unstable_setRequestLocale(locale);
 
   return (
     <html lang={locale || 'es'} className={gotham.className}>
