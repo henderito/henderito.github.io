@@ -1,7 +1,7 @@
 'use client'
 
 import React, { FC, useActionState, useState } from "react"
-import { sendContactForm } from "@/actions/sendContactForm"
+// import { sendContactForm } from "@/actions/sendContactForm"
 import { IContactFormProps } from "../Sections/Contact/types"
 import styled from "styled-components"
 import { useFormStatus } from "react-dom"
@@ -42,7 +42,7 @@ const initialState = {
 
 export const ContactForm: FC<IContactFormProps> = () => {
     const t = useTranslations('Home.Contact')
-    const [state, formAction] = useActionState(sendContactForm, initialState)
+    // const [state, formAction] = useActionState(sendContactForm, initialState)
     const [name, setName] = useState<string | undefined>(undefined)
     const [email, setEmail] = useState<string | undefined>(undefined)
 
@@ -51,7 +51,8 @@ export const ContactForm: FC<IContactFormProps> = () => {
     const fakeAction = () => {}
 
     return (
-        <StyledForm action={formAction}>
+        // <StyledForm action={formAction}>
+        <StyledForm>
             <StyledFormContainer>
                 <Text label={t('ContactBanner')} size="lg" variant="black" />
                 <Text label={t('ContactBannerSubtitle')} size="sm" variant="description" />
