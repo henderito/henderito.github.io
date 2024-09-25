@@ -9,12 +9,14 @@ export default getRequestConfig(async ({locale}) => {
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
 
-  const headersList = headers();
-  const defaultLocale = headersList.get("accept-language");
-  const defaultBrowserLocale = cookies().get("NEXT_LOCALE")?.value || defaultLocale || "es";
+  // const headersList = headers();
+  // const defaultLocale = headersList.get("accept-language");
+  // const defaultBrowserLocale = cookies().get("NEXT_LOCALE")?.value || defaultLocale || "es";
+  // const defaultBrowserLocale = cookies().get("NEXT_LOCALE")?.value || "es";
  
   return {
-    locale: defaultBrowserLocale,
+    // locale: defaultBrowserLocale,
+    locale: 'es',
     messages: (await import(`../messages/${locale}.json`)).default
   };
 });
