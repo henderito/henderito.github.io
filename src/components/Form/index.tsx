@@ -22,6 +22,11 @@ const StyledForm = styled.form`
     /* border-radius: ${FORM_BORDER_RADIUS}px; */
     box-shadow: 0px 6px 16px rgba(0,0,0,0.2);
     gap: 2rem;
+
+    @media (max-width: 1100px) {
+        height: 420px;
+        flex-direction: column;
+    }
 `
 
 const StyledFormContainer = styled.div`
@@ -34,6 +39,25 @@ const StyledInputContainer = styled.div`
     gap: 2rem;
     align-items: center;
     justify-content: end;
+
+    @media (max-width: 1500px) {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    @media (max-width: 1100px) {
+        gap: 0;
+        width: 100%;
+    }
+
+    @media (max-width: 550px) {
+    }
+`
+
+const ButtonContainer = styled.div`
+    @media (max-width: 1100px) {
+        width: 100%;
+    }
 `
 
 const initialState = {
@@ -54,8 +78,10 @@ export const ContactForm: FC<IContactFormProps> = () => {
         // <StyledForm action={formAction}>
         <StyledForm>
             <StyledFormContainer>
-                <Text label={t('ContactBanner')} size="lg" variant="black" />
-                <Text label={t('ContactBannerSubtitle')} size="sm" variant="description" />
+                {/* <Text label={t('ContactBanner')} size="lg" variant="black" />
+                <Text label={t('ContactBannerSubtitle')} size="sm" variant="description" /> */}
+                <h6>{t('ContactBanner')}</h6>
+                <p>{t('ContactBannerSubtitle')}</p>
             </StyledFormContainer>
             <StyledInputContainer>
                 <Input
@@ -78,6 +104,8 @@ export const ContactForm: FC<IContactFormProps> = () => {
                     name="email"
                     value={email}
                 />
+            </StyledInputContainer>
+            <ButtonContainer>
                 <Button 
                     disabled={pending} 
                     size="small" 
@@ -88,7 +116,7 @@ export const ContactForm: FC<IContactFormProps> = () => {
                 >
                     {t('Send')}
                 </Button>
-            </StyledInputContainer>
+            </ButtonContainer>
         </StyledForm>
     )
 }

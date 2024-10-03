@@ -20,7 +20,7 @@ const StyledTag = styled.div`
   
     & span {
       margin-right: 0.5rem;
-      font-size: 0.9rem;
+      /* font-size: 1vw; */
       font-weight: 500;
       /* color: rgba(255, 255, 255, 0.6); */
       color: black;

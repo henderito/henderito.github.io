@@ -26,6 +26,7 @@ const GlobalStyles = createGlobalStyle`
 
   main {
     background-color: ${COLORS.white};
+    width: 100%;
   }
 
   body {
@@ -48,8 +49,58 @@ const GlobalStyles = createGlobalStyle`
     overflow-wrap: break-word;
   }
 
+  h1 {
+    font-size: clamp(
+      4.4rem,
+      calc(5vw + 1rem),
+      6rem
+    );
+  }
+
+  h2 {
+    font-size: clamp(
+      3.2rem,
+      calc(4vw + 1rem),
+      4.4rem
+    );
+  }
+
+  h3 {
+    font-size: clamp(
+      2.4rem,
+      calc(3vw + 1rem),
+      3.2rem
+    );
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  h6 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  article {
+    font-size: 0.7rem;
+  }
+
   #root, #__next {
     isolation: isolate;
+  }
+
+  @media (pointer: coarse) {
+    html {
+      --min-tap-height: 44px;
+    }
   }
 `;
 

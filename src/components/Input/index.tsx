@@ -12,6 +12,19 @@ const InputContainer: FC<IInputContainerProps> = styled.div`
   position: relative;
   margin-top: 30px;
 
+  @media (max-width: 1500px) {
+  margin-top: 12px;
+  }
+
+  @media (max-width: 1100px) {
+  margin-top: 30px;
+  width: 100%;
+  }
+
+  @media (max-width: 550px) {
+  margin-top: 30px;
+  } 
+
   & > input {
     border: 2px solid ${props => props.error ? '#e77674' : COLORS.black};
     border-radius: 0.25rem;
@@ -22,6 +35,19 @@ const InputContainer: FC<IInputContainerProps> = styled.div`
     transition: all 0.2s ease;
     z-index: 500;
     color: ${COLORS.primary};
+
+    @media (max-width: 1500px) {
+      padding: 8px 3px 8px 8px;
+    }
+    
+    @media (max-width: 1100px) {
+      padding: 12px 3px 12px 15px;
+  width: 100%;
+    }
+    
+    @media (max-width: 550px) {
+      padding: 12px 3px 12px 15px;
+    }    
   }
   & > label {
     color: ${COLORS.black};

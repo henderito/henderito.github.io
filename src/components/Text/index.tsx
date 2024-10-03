@@ -15,6 +15,15 @@ const StyledText: FC<{ children: ReactNode, style: any, alignment: 'center' | 's
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+
+    @media (max-width: 1500px) {
+    }
+    
+    @media (max-width: 1100px) {
+    }
+    
+    @media (max-width: 550px) {
+    }    
 `
 
 export const Text: FC<ITextsProps> = ({ label, variant, size, align = 'start',  ...rest }) => {

@@ -7,25 +7,24 @@ import { BUTTON_SIZES, BUTTON_STYLES, COLORS } from "@/global/theme";
 import { ChevronRight } from "../Icons/ChevronRight";
 
 const ButtonBase: FC<{ 
-    fontWeight: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900, 
-    children: ReactNode,
-    style: any,
-    onClick: any }> = styled.button`
+      fontWeight: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900, 
+      children: ReactNode,
+      style: any,
+      onClick: any }> = styled.button`
+  // General styling
   font-size: var(--fontSize);
-  font-family: "Roboto", sans-serif;
-  padding: var(--padding);
+  font-weight: ${props => props.fontWeight};
+  color: var(--color);
+  cursor: pointer;
+
+  width: 100%;
+  min-width: 180px;
+  padding: 8px 12px;
+  display: flex;
+
   border-radius: var(--borderRadius);
   border: var(--border);
-  color: var(--color);
   background-color: var(--backgroundColor);
-  cursor: pointer;
-  width: var(--width);
-  height: var(--height);
-  font-weight: ${props => props.fontWeight};
-
-  display: flex;
-  align-items: center;
-
   background-image: var(--backgroundFill);
   background-size: 0 100%;
   background-repeat: no-repeat;
@@ -43,6 +42,23 @@ const ButtonBase: FC<{
     border: var(--hoverBorder);
     background-size: 100% 100%;
     justify-content: space-between;
+  }
+
+  
+  @media (max-width: 1500px) {
+    max-width: 320px;
+  }
+  
+  @media (max-width: 1100px) {
+    max-width: none;
+  }
+  
+  @media (max-width: 550px) {
+    max-width: 160px;
+  }
+  // For mobile-devices recommended min tap height
+  @media (pointer: coarse) {
+    min-height: 44px;
   }
 `;
 

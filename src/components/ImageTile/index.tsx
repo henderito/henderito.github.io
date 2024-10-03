@@ -25,6 +25,21 @@ const StyledBackground: FC<IImageTileContainerProps> = styled.div`
         width: 600px;
         height: 600px;
     }
+
+    @media (max-width: 1500px) {
+        height: 400px;
+        min-height: 400px;
+        /* width: 100%; */
+        width: 400px;
+    }
+
+    @media (max-width: 1100px) {
+        /* max-width: 240px; */
+    }
+
+    @media (max-width: 550px) {
+        /* max-width: 160px; */
+    }
 `
 
 const StyledContainer = styled.div`
@@ -48,23 +63,23 @@ const StyledContainer = styled.div`
     }
 `
 
-const StyledDescriptionContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    /* background-color: transparent; */
-    width: 100%;
-    height: 100%;
+// const StyledDescriptionContainer = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     /* background-color: transparent; */
+//     width: 100%;
+//     height: 100%;
 
-    & > button {
-        display: none;
-    }
+//     & > button {
+//         display: none;
+//     }
 
-    &:hover {
-        & > button {
-            display: flex;
-        }
-    }
-`
+//     &:hover {
+//         & > button {
+//             display: flex;
+//         }
+//     }
+// `
 
 export const ImageTile: FC<ImageTileProps> = ({ image, buttonLabel, description, url, title }) => {
     return (

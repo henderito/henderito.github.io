@@ -12,6 +12,13 @@ const StyledVideoPlayerContainer = styled.div`
     width: 100%;
     height: auto;
     gap: 0.6rem;
+
+    @media (max-width: 1100px) {
+        align-items: center;
+    }
+
+    @media (max-width: 550px) {
+    }
 `
 
 export const VideoPlayer: FC<IVideoPlayerProps> = ({ description, id, src, title }) => {

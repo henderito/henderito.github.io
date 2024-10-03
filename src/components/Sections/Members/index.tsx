@@ -14,7 +14,8 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    min-width: 100vw;
+    height: 100%;
     align-items: center;
     justify-content: space-evenly;
     background-color: ${COLORS.white};
@@ -22,6 +23,17 @@ const StyledContainer = styled.div`
     gap: 2rem;
     background-image: url(${ASSET_BACKGROUND_GRAY});
     background-size: cover;
+
+    @media (max-width: 1500px) {
+        padding: ${HEADER_ROOM_PADDING}rem ${HOME_COLUMN_PADDING - 4}rem;
+    }
+
+    @media (max-width: 1100px) {
+        padding: 2rem 0px 0px 2rem;
+    }
+
+    @media (max-width: 550px) {
+    }
 `
 
 const StyledLogoContainer = styled.div`
@@ -37,8 +49,15 @@ const StyledLogo = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid rgba(220, 220, 220, 0.9); */
     padding: 3rem;
+
+    @media (max-width: 1100px) {
+        padding: 2rem;
+    }
+
+    @media (max-width: 550px) {
+    max-width: 160px;
+    }
 `
 
 export const MemberSection: FC<IMembersProps> = () => {

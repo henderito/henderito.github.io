@@ -1,8 +1,3 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/[locale]/galeria/page": "app/[locale]/galeria/page.js",
-  "/[locale]/novedades/page": "app/[locale]/novedades/page.js",
-  "/[locale]/page": "app/[locale]/page.js",
-  "/[locale]/unicornios/page": "app/[locale]/unicornios/page.js",
-  "/[locale]/novedades/[id]/page": "app/[locale]/novedades/[id]/page.js"
+  "/[locale]/page": "app/[locale]/page.js"
 }

@@ -14,19 +14,46 @@ import { ASSET_UNICORNS_3D_UNICORN, ASSET_UNICORNS_CONTACT_UNICORN, ASSET_UNICOR
 
 const StyledContainer = styled.div`
     display: flex;
-    min-height: 100%;
+    min-height: 100vh;
+    height: 100%;
     width: 100%;
+    min-width: 100vw;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: ${HEADER_ROOM_PADDING}rem ${HOME_COLUMN_PADDING}rem;
+
+    @media (max-width: 1500px) {
+        padding: ${HEADER_ROOM_PADDING}rem ${HOME_COLUMN_PADDING - 4}rem;
+    }
+
+    @media (max-width: 1100px) {
+        padding: 2rem 2rem 0px 2rem;
+    }
+
+    @media (max-width: 550px) {
+        
+    }
 `
 
 const TitleContainer = styled.div`
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 2fr 4fr;
     gap: 2rem;
     align-items: center;
+
+    @media (max-width: 1500px) {
+        grid-template-columns: 2fr 3fr;
+    }
+
+    @media (max-width: 1100px) {
+        display: flex;
+    /* grid-template-columns: 2fr 4fr; */
+    }
+
+    @media (max-width: 550px) {
+    /* grid-template-columns: 2fr 4fr; */
+    }
 `
 
 const ImageTileContainer = styled.div`
@@ -38,6 +65,21 @@ const ImageTileContainer = styled.div`
     justify-items: center;
     height: 100%;
     min-height: 700px;
+
+    @media (max-width: 1500px) {
+        min-height: 500px;
+    }
+
+    @media (max-width: 1100px) {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    @media (max-width: 550px) {
+        min-height: 700px;
+    }
 `
 
 const StyledVideoDescriptionContainer = styled.div`
@@ -47,6 +89,13 @@ const StyledVideoDescriptionContainer = styled.div`
     align-items: start;
     width: 100%;
     gap: 3rem;
+  
+    @media (max-width: 1100px) {
+        align-items: center;
+    }
+
+    @media (max-width: 550px) {
+    }
 `
 
 const StyledVideoContainer = styled.div`
@@ -56,15 +105,35 @@ const StyledVideoContainer = styled.div`
       repeat(auto-fill, minmax(350px, 1fr));
     grid-auto-flow: row;
     gap: 1rem;
+
+    @media (max-width: 1100px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (max-width: 550px) {
+    }
 `
 
 const WeDoImage = styled.div`
     background-image: url(${ASSET_UNICORNS_CONTACT_UNICORN});
-    background-size: 30rem 18rem;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     width: 100%;
     height: auto;
     min-height: 300px;
+
+    @media (max-width: 1500px) {
+    }
+
+    @media (max-width: 1100px) {
+        display: none;
+    }
+
+    @media (max-width: 550px) {
+    }
 `
 
 const ImageLogoContainer = styled.div`
@@ -72,6 +141,18 @@ const ImageLogoContainer = styled.div`
     margin: 4rem 0px;
     display: flex;
     justify-content: center;
+
+    @media (max-width: 1500px) {
+        margin: 2rem 0px;
+    }
+
+    @media (max-width: 1100px) {
+        margin: 1rem 0px;
+    }
+
+    @media (max-width: 550px) {
+        /* margin: 4rem 0px; */
+    }
 `
 
 export const CompaniesSection: FC<ICompaniesProps> = () => {
@@ -81,7 +162,8 @@ export const CompaniesSection: FC<ICompaniesProps> = () => {
         <StyledContainer>
             <TitleContainer>
                 <WeDoImage />
-                <Text label={t("Description")} size="md" variant="description" />                
+                {/* <Text label={t("Description")} size="md" variant="description" /> */}
+                <p>{t("Description")}</p>
             </TitleContainer>
             <StyledVideoDescriptionContainer>
                 <Text label={t('Interventions')} size="3xl" variant="alternatePink" />

@@ -9,7 +9,7 @@ import {unstable_setRequestLocale} from 'next-intl/server';
 
 export const metadata: Metadata = {
   title: "Uniqueer",
-  description: "Uniqueer",
+  description: "Uniqueer"
 };
 
 const locales = ['en', 'es', 'fr', 'it', 'pt'];

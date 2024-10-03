@@ -14,9 +14,22 @@ import { ASSET_UNICORNS_LOGO_UNICORN, FACEBOOK_UNIQUEER_LINK, INSTAGRAM_UNIQUEER
 const StyledFooterContainer = styled.div`
     display: flex;
     width: 100%;
+    min-width: 100vw;
     flex-direction: column;
     padding: 0 ${HOME_COLUMN_PADDING}rem 1rem;
     gap: 1rem;
+
+    @media (max-width: 1500px) {
+        padding: 0 ${HOME_COLUMN_PADDING - 4}rem 1rem;
+    }
+
+    @media (max-width: 1100px) {
+        padding: 2rem;
+    }
+
+    @media (max-width: 550px) {
+        padding: 0 ${HOME_COLUMN_PADDING}rem 1rem;
+    }
 `
 
 const Divider = styled.div`

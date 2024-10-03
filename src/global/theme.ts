@@ -51,13 +51,13 @@ export const TEXT_SIZES: Theme.TextSize = {
     '--fontSize': '1.8rem'
   },
   '2xl': {
-    '--fontSize': '2.4rem'
+    '--fontSize': 'clamp(2.4rem, calc(3vw + 1rem), 3.2rem)'
   },
   '3xl': {
-    '--fontSize': '3.2rem'
+    '--fontSize': 'clamp(3.2rem, calc(4vw + 1rem), 4.4rem)'
   },
   '4xl': {
-    '--fontSize': '4.4rem'
+    '--fontSize': 'clamp(4.4rem, calc(5vw + 1rem), 6rem)'
   }
 }
 

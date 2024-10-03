@@ -29,17 +29,19 @@ export const DonateBanner: FC<IContactFormProps> = () => {
     return (
         <StyledForm>
             <Text label={t('DonateBanner')} size="lg" variant="title" />
-            <Button 
-                disabled={pending} 
-                size="small" 
-                variant="ghost" 
-                type="submit" 
-                hasIcon 
-                fill={COLORS.white}
-                fontWeight={700}
-            >
-                {t('DonateCTA')}
-            </Button>
+            <div>
+                <Button 
+                    disabled={pending} 
+                    size="small" 
+                    variant="ghost" 
+                    type="submit" 
+                    hasIcon 
+                    fill={COLORS.white}
+                    fontWeight={700}
+                >
+                    {t('DonateCTA')}
+                </Button>
+            </div>
         </StyledForm>
     )
 }

@@ -9,18 +9,24 @@ import styled from "styled-components"
 import { ChevronRight } from "../Icons"
 
 const StyledLink = styled.a`
-    background-color: ${COLORS.primary};
     color: ${COLORS.white};
     border: 2px solid ${COLORS.primary};
+
+    background-color: ${COLORS.primary};
     background-image: linear-gradient(90deg, hsl(198, 76%, 53%) 0%, hsl(198, 76%, 53%) 56%);
     background-size: 0 100%;
     background-repeat: no-repeat;
+
     transition: .5s;
     cursor: pointer;
-    padding: 8px 24px;
+
+    padding: 8px 12px;
     border-radius: ${BORDER_RADIUS}px;
+    /* width: 100%; */
+    min-width: 180px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     font-weight: bold !important;
 
     &:hover {
@@ -30,19 +36,13 @@ const StyledLink = styled.a`
     }
 `
 
-const ChevronContainer = styled.div`
-    padding-left: 2rem;
-`
-
 export const DonateLink: FC<IDonateLinkProps> = () => {
     const t = useTranslations('Home.Contact')
     
     return (
         <StyledLink href={MERCADOPAGO_DONATION_LINK} target='__blank'>
             {t('DonateCTA')}
-            <ChevronContainer>
-                <ChevronRight fill={COLORS.white} height={20} width={20} />
-            </ChevronContainer>
+            <ChevronRight fill={COLORS.white} height={20} width={20} />
         </StyledLink>
     )
 }

@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/henderito/code/henderito.github.io/src/app/[locale]/layout":["static/media/b3c1ec8b63de32cf-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/henderito/code/henderito.github.io/src/app/[locale]/layout\":[\"static/media/b3c1ec8b63de32cf-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

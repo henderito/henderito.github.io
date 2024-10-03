@@ -12,19 +12,36 @@ import { ASSET_BACKGROUND_UNICORN } from "@/global/constants";
 
 const StyledBackground = styled.div`
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(${ASSET_BACKGROUND_UNICORN});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 `;
 
 const StyledContainer = styled.div`
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     padding: ${HEADER_ROOM_PADDING}rem ${HOME_COLUMN_PADDING}rem 0px;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
     gap: 2rem;
+
+    @media (max-width: 1500px) {
+        padding: ${HEADER_ROOM_PADDING}rem ${HOME_COLUMN_PADDING - 4}rem 0px;
+    }
+
+    @media (max-width: 1100px) {
+        padding: 2rem 0px 0px 2rem;
+        gap: 0;
+        justify-content: space-evenly;
+    }
+
+    @media (max-width: 550px) {
+        padding: ${HEADER_ROOM_PADDING}rem ${HOME_COLUMN_PADDING}rem 0px;
+    }
 `;
 
 const StyledButtonContainer = styled.div`
@@ -34,6 +51,18 @@ const StyledButtonContainer = styled.div`
 
 const StyledDescriptionContainer = styled.div`
     width: 30%;
+
+    @media (max-width: 1500px) {
+        width: 45%;
+    }
+
+    @media (max-width: 1100px) {
+        width: 60%;
+    }
+
+    @media (max-width: 550px) {
+        width: 100%;
+    }
 `
 
 export const StartSection: FC<IStartProps> = () => {
