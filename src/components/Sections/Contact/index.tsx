@@ -29,7 +29,7 @@ const StyledContainer = styled.div`
     }
 
     @media (max-width: 550px) {
-    padding: ${HEADER_ROOM_PADDING}rem ${HOME_COLUMN_PADDING}rem;
+        padding: 2rem 2rem 0px 2rem;
     }
 `
 

@@ -40,7 +40,9 @@ const StyledContainer = styled.div`
     }
 
     @media (max-width: 550px) {
-        padding: ${HEADER_ROOM_PADDING}rem ${HOME_COLUMN_PADDING}rem 0px;
+        padding: 2rem 0px 0px 2rem;
+        gap: 0;
+        justify-content: space-evenly;
     }
 `;
 

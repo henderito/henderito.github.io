@@ -34,6 +34,10 @@ const StyledLink = styled.a`
         border: 2px solid ${COLORS.blue};
         background-size: 100% 100%; 
     }
+
+    @media (max-width: 550px) {
+        width: 100%;
+    }
 `
 
 export const DonateLink: FC<IDonateLinkProps> = () => {

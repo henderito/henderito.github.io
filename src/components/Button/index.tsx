@@ -54,7 +54,7 @@ const ButtonBase: FC<{
   }
   
   @media (max-width: 550px) {
-    max-width: 160px;
+    max-width: none;
   }
   // For mobile-devices recommended min tap height
   @media (pointer: coarse) {

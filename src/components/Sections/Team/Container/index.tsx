@@ -31,6 +31,7 @@ const StyledContainer = styled.div`
     }
 
     @media (max-width: 550px) {
+        padding: 2rem 2rem 0px 2rem;
     }
 `
 
@@ -48,6 +49,8 @@ const StyledGrid = styled.div`
     }
 
     @media (max-width: 550px) {
+        grid-template-columns:
+        repeat(auto-fill, minmax(100%, 1fr));
     }
 `
 

@@ -33,6 +33,8 @@ const StyledContainer = styled.div`
     }
 
     @media (max-width: 550px) {
+        padding: 2rem 0px 0px 0px;
+        gap: 1rem;
     }
 `
 
@@ -41,6 +43,11 @@ const StyledLogoContainer = styled.div`
     display: grid;
     grid-template-columns:
       repeat(auto-fill, minmax(250px, 1fr));
+
+    @media (max-width: 550px) {
+        grid-template-columns:
+        repeat(auto-fill, minmax(40%, 1fr));
+    }
 `
 
 const StyledLogo = styled.div`
@@ -56,7 +63,8 @@ const StyledLogo = styled.div`
     }
 
     @media (max-width: 550px) {
-    max-width: 160px;
+        padding: 1rem;;
+    /* max-width: 160px; */
     }
 `
 

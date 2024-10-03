@@ -28,7 +28,7 @@ const StyledFooterContainer = styled.div`
     }
 
     @media (max-width: 550px) {
-        padding: 0 ${HOME_COLUMN_PADDING}rem 1rem;
+        padding: 2rem;
     }
 `
 

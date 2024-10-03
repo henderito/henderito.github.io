@@ -19,6 +19,17 @@ const StyledForm = styled.div`
     background-color: ${COLORS.primary};
     box-shadow: 0px 6px 16px rgba(0,0,0,0.2);
     gap: 2rem;
+
+    @media (max-width: 550px) {
+        flex-direction: column;
+        height: auto;
+    }
+`
+
+const StyledButtonContainer = styled.div`
+    @media (max-width: 550px) {
+        width: 100%;
+    }
 `
 
 export const DonateBanner: FC<IContactFormProps> = () => {
@@ -29,7 +40,7 @@ export const DonateBanner: FC<IContactFormProps> = () => {
     return (
         <StyledForm>
             <Text label={t('DonateBanner')} size="lg" variant="title" />
-            <div>
+            <StyledButtonContainer>
                 <Button 
                     disabled={pending} 
                     size="small" 
@@ -41,7 +52,7 @@ export const DonateBanner: FC<IContactFormProps> = () => {
                 >
                     {t('DonateCTA')}
                 </Button>
-            </div>
+            </StyledButtonContainer>
         </StyledForm>
     )
 }

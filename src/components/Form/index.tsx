@@ -27,6 +27,10 @@ const StyledForm = styled.form`
         height: 420px;
         flex-direction: column;
     }
+
+    @media (max-width: 550px) {
+        height: auto;
+    }
 `
 
 const StyledFormContainer = styled.div`
@@ -48,9 +52,6 @@ const StyledInputContainer = styled.div`
     @media (max-width: 1100px) {
         gap: 0;
         width: 100%;
-    }
-
-    @media (max-width: 550px) {
     }
 `
 

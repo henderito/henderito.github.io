@@ -18,6 +18,11 @@ const StyledForm = styled.div`
     background-color: ${COLORS.blue};
     box-shadow: 0px 6px 16px rgba(0,0,0,0.2);
     gap: 2rem;
+
+    @media (max-width: 550px) {
+        flex-direction: column;
+        height: auto;
+    }
 `
 
 export const BuyUniqueerBanner: FC<IBuyUniqueerBannerProps> = () => {
